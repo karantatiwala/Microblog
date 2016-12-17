@@ -1,0 +1,36 @@
+<p>
+	{% if myfeed %}
+		{% for i in feed %}
+				{% if i.userid == username %}
+				<div class="container" style="width: 750px;">
+					<div class="jumbotron" style="line-height: 20px;">
+						<div style="margin-top: -30px;">
+							<h2>{{ i.title }}</h2> 
+							<h5><b>Related Tags:</b> {{ i.tags }}</h5><br />
+							<p>{{ i.post }}<p>
+							
+						</div>
+					</div>
+				</div>
+				{% endif %}
+			{% endfor %}
+	{% elif title %}
+		<h1>Results for "{{ title }}"</h1>
+			{% for i in feed %}
+				{% if i.title == title %}
+					<li>				
+					<h3>{{ i.post }}</h3>
+					<h5><b>Related Tags:</b> {{ i.tags }}</h5>
+					</li>
+				{% endif %}
+			{% endfor %}
+	{% elif error1 %}
+		<h2><b>Error:</b></h2> <h3>{{ error1 }}</h3
+	{% else %}
+		<div><p><h2>No posts to show</h2></p></div>
+	{% endif %}
+
+</p>
+
+
+

@@ -1,0 +1,12 @@
+client ID::   136783183654-jtdjq47utgkgh64tt8mbrfmd41i4rn3m.apps.googleusercontent.com 
+client secret::  JIRIV3QeKWyNLuVgo7a1644c
+
+
+
+
+
+Facebook:
+
+App ID:: 139235389897591
+
+App Secret:: 56fef7209a67c9338fdbe00020fc1288
