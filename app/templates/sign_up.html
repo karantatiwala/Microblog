@@ -12,7 +12,7 @@
 {% block body %} -->
 
 
-<div class="container" style="width: 600px; margin-top: 70px;">
+<div class="container" style="width: 700px; margin-top: 70px;">
 	<div class="panel panel-default" style=" border-radius: 15px;">
     	<div class="panel-body">
 			<h2 style="text-align: center; margin-top: -5px;">Create Account</h2>
@@ -48,14 +48,17 @@
 						<br />
 						<button type="submit" class="btn btn-primary">Sign Up</button>
 					</form>
+
+				{% if error %}
+					<h4><b>Error:</b> {{ error }}</h4>
+				{% endif %}
 				</div>
-				
+
+
 			</div>
 			<!-- <div style="border-left:1px solid #000; height:225px; padding-left: 40px;"></div> -->
 
-{% if error %}
-	<h4><b>Error:</b> {{ error }}</h4>
-{% endif %}
+
 		</div>
 	</div>
 </div>
