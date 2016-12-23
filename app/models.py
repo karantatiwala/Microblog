@@ -20,7 +20,7 @@ class post(db.Model):
     title=db.Column(db.String(100), nullable=False)
     tags=db.Column(db.String(100), nullable=False)
     date_time=db.Column(db.DateTime(100), nullable=True)
-    userid=db.Column(db.String(25), nullable=False)
+    userid=db.Column(db.String(25), nullable=False, primary_key=True)
 
     def __init__(self, post,title,tags,userid):
         # self.id = id

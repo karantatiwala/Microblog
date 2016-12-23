@@ -109,19 +109,20 @@ def facebook_authorized(resp):
     me = facebook.get('/me')
 
     name = me.data['name']
-    user =users(name,'')
-    check = users.query.filter_by(username=name).first()
-    # session['username'] = name
-    if check == None:
-    	session['username'] = name
-    	db.session.add(user)
-    	db.session.commit()
+    # user =users(name,'')
+    # check = users.query.filter_by(username=name).first()
+    # # session['username'] = name
+    # if check == None:
+    # 	session['username'] = name
+    # 	db.session.add(user)
+    # 	db.session.commit()
     	
-    	print name
-    	# return redirect(url_for('user',username=name))
-    else:
-    	session['username']=name
-    	print session['username']
+    # 	print name
+    # 	# return redirect(url_for('user',username=name))
+    # else:
+    # 	session['username']=name
+    # 	print session['username']
+    session['username'] = name
 
     return redirect(url_for('user',username=session['username']))
     # return redirect(url_for('user',username=name))

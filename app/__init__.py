@@ -12,8 +12,8 @@ app=Flask(__name__)
 
 
 
-#app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://karan:krishna@localhost/app'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://karan:krishna@localhost/app'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://sql6150673:BhKu6fKlcg@sql6.freemysqlhosting.net/sql6150673'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://sql6150673:BhKu6fKlcg@sql6.freemysqlhosting.net/sql6150673'
 from models import db
 db.init_app(app)
 
